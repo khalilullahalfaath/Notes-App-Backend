@@ -11,12 +11,7 @@ class NotesService {
     const updatedAt = createdAt;
 
     const newNote = {
-      id,
-      title,
-      body,
-      tags,
-      createdAt,
-      updatedAt,
+      title, tags, body, id, createdAt, updatedAt,
     };
 
     this._notes.push(newNote);
@@ -37,7 +32,7 @@ class NotesService {
     const note = this._notes.filter((n) => n.id === id)[0];
 
     if (!note) {
-      throw new Error('Catatan gagal ditampilkan');
+      throw new Error('Catatan tidak ditemukan');
     }
     return note;
   }
@@ -53,8 +48,8 @@ class NotesService {
     this._notes[index] = {
       ...this._notes[index],
       title,
-      body,
       tags,
+      body,
       updatedAt,
     };
   }
