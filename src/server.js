@@ -10,7 +10,7 @@ const NotesValidator = require('./validator/notes/index');
 // users
 const users = require('./api/users');
 const UsersService = require('./services/postgres/UsersService');
-const UsersValidator = require('./validator/users');
+const UsersValidator = require('./validator/users/index');
 
 const init = async () => {
   const notesService = new NotesService();

@@ -42,6 +42,7 @@ class UsersHandler {
       });
 
       response.code(500);
+      console.log(error);
       return response;
     }
   }
